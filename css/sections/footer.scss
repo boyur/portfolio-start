@@ -1,0 +1,102 @@
+footer {
+	background: #414141;
+
+	@include phones {
+		margin-top: -100px;
+	}
+}
+
+.footer__left {
+	display: inline-block;
+	float: left;
+
+	@include phones {
+		float: none;
+		width: 100%;
+		min-height: 50px;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+.footer__right {
+	display: inline-block;
+	float: right;
+
+	@include phones {
+		float: none;
+		width: 100%;
+		line-height: 49px;
+
+		.socials {
+			text-align: center;
+			padding-top: 0;
+		}
+
+	}
+}
+
+.socials {
+	text-align: right;
+	padding-top: 10px;
+	cursor: default;
+
+	@include phones {
+		padding-top: 0;
+	}
+}
+
+.socials__item {
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.socials__link {
+	display: inline-block;
+	width: 31px;
+	height: 30px;
+	background: url('../img/icons/social.png') no-repeat;
+
+	&:hover {
+		background-position-y: -44px;
+	}
+
+	&:active {
+		margin-top: 1px;
+		margin-bottom: -1px;
+	}
+}
+
+.socials__link_fb {
+	background-position-x: -3px;
+	&:hover {
+		background-position-x: -3px;
+	}
+}
+
+.socials__link_vk {
+	background-position-x: -41px;
+	&:hover {
+		background-position-x: -41px;
+	}
+}
+
+.socials__link_tw {
+	background-position-x: -79px;
+	&:hover {
+		background-position-x: -79px;
+	}
+}
+
+.copyright {
+	font-family: 'fira_sanslight', serif;
+	font-size: 14px;
+	color: #9c9c9c;
+	margin-top: 18px;
+	min-height: 21px;
+
+	@include phones {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+}

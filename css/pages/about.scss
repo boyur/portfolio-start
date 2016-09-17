@@ -1,0 +1,144 @@
+@include scrollbars(5px, #d8d8d8);
+
+.about__left {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  text-align: center;
+
+  @include tablets {
+    width: 30%;
+    min-width: 170px;
+  }
+
+  @include phones {
+    width: auto;
+    float: none;
+    padding: 0px;
+  }
+
+}
+
+.about__right {
+  width: 62%;
+  max-width: 390px;
+  margin-left: 10px;
+  float: right;
+
+  @include tablets {
+    width: 61%;
+    max-width: 440px;
+    float: left;
+    margin-left: 20px;
+  }
+
+  @include phones {
+    width: auto;
+    float: none;
+    margin-bottom: 50px;
+  }
+}
+
+.about__pic {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 220px;
+  height: 220px;
+
+  @include desktop {
+    width: auto;
+    height: auto;
+    max-width: 220px;
+    max-height: 220px;
+  }
+
+  @include  tablets {
+    max-width: 165px;
+    max-height: 165px;
+  }
+
+  @include phones {
+    max-width: 145px;
+    max-height: 145px;
+  }
+}
+
+.about__pic-img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about__desc {
+  font-family: 'fira_sanslight', serif;
+  overflow: auto;
+  max-height: rem(300px);
+  margin-bottom: 45px;
+  padding-right: 10px;
+
+  p {
+    font-size: rem(18px);
+    color: #646464;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  @include phones {
+    overflow: initial;
+    max-height: none;
+  }
+}
+
+.about__btns {
+  @extend %clearfix;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  float: right;
+  border: 2px solid $red;
+  border-radius: rem(30px);
+
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  padding: 9px 11px;
+  margin-right: 15px;
+  text-decoration: none;
+
+  &:hover {
+    background: $red;
+
+    .btn__icon {
+      color: #fff;
+    }
+
+    .btn__text {
+      color: #fff;
+    }
+  }
+
+  &:active {
+    margin-top: 1px;
+    margin-bottom: -1px;
+  }
+
+  @include phones {
+    float: none;
+  }
+}
+
+.btn__icon {
+  color: $red;
+  margin-right: 8px;
+}
+
+.btn__text {
+  font-family: 'fira_sansbold', serif;
+  color: $red;
+}

@@ -1,0 +1,31 @@
+.content {
+  margin-bottom: 50px;
+}
+
+.page_content {
+  @extend %clearfix;
+  width: 73%;
+  float: right;
+  padding-bottom: 50px;
+  margin-right: -10px;
+
+  @include tablets {
+    width: 100%;
+    float: none;
+  }
+}
+
+.maincontent {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-family: 'fira_sansmedium', serif;
+  font-size: 35px;
+  color: #414141;
+  margin-bottom: rem(18px);
+
+  @include phones {
+    text-align: center;
+  }
+}
